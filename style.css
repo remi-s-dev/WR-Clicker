@@ -1,0 +1,169 @@
+/* --- Bases & Typographie --- */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent-color: #38bdf8;
+    --accent-hover: #0ea5e9;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --danger: #ef4444;
+    --success: #22c55e;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+/* --- Mise en page (Layout) --- */
+.centre, .container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* --- Header (Barre du haut) --- */
+.haut {
+    width: 100%;
+    background: #111827;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.haut h1 { margin: 0; font-size: 1.5rem; color: var(--accent-color); }
+.haut a { color: var(--text-muted); text-decoration: none; font-weight: bold; }
+.haut a:hover { color: var(--accent-color); }
+
+/* --- Formulaires (Connexion / Inscription) --- */
+.form-header h1 { margin-bottom: 25px; font-weight: 300; }
+.highlight { color: var(--accent-color); font-weight: bold; }
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: white;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* --- Boutons --- */
+button, .submit-btn, .save-btn, .return-btn {
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    transition: transform 0.1s, background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.submit-btn, .save-btn {
+    background: var(--accent-color);
+    color: #000;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn:hover, .save-btn:hover { background: var(--accent-hover); }
+
+button:active { transform: scale(0.95); }
+
+/* --- Zone de Jeu (jeu.php) --- */
+.click-btn {
+    transition: transform 0.1s ease;
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.2));
+    max-width: 250px;
+    margin: 20px 0;
+}
+
+.click-btn:active { transform: scale(0.9); }
+
+.score-section h2 { font-size: 1rem; color: var(--text-muted); text-transform: uppercase; }
+#score2 { font-size: 3.5rem; font-weight: 800; margin: 0; color: var(--accent-color); }
+.buttons-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.buttons-section button {
+    background: #334155;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.buttons-section button:hover { background: #475569; }
+
+/* --- Tableaux (Classement / Aide) --- */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.styled-table th {
+    background-color: #334155;
+    color: var(--accent-color);
+    padding: 12px;
+}
+
+.styled-table td {
+    padding: 12px;
+    border-bottom: 1px solid #334155;
+}
+
+.styled-table tr:hover { background: rgba(255,255,255,0.05); }
+
+/* --- Confirmation & Erre r --- */
+.resultat {
+    color: var(--success);
+    font-weight: bold;
+    border: 1px solid var(--success);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+a:visited {
+    color: #00d5ff;
+  }
+
+h3 {
+    color:#0ea5e9;
+    font-size: 1.2rem;
+}

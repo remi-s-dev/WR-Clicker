@@ -1,0 +1,106 @@
+/* Général */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Bandeau du haut */
+.haut {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo gauche */
+.gauche {
+    height: 50px;
+}
+
+/* Titre au centre */
+.centre {
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Lien à droite */
+.droite {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.droite:hover {
+    text-decoration: underline;
+}
+
+/* Section principale */
+.centre > h2 {
+    color: #003366;
+    margin-top: 40px;
+}
+
+.centre > p, .centre > ul, .centre > table {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Listes */
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+/* Tableau des bonus */
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    background-color: #0066cc;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Petite animation pour les titres */
+h1, h2 {
+    transition: all 0.3s ease;
+}
+
+h2:hover {
+    color: #00509e;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .haut {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .centre > p, .centre > ul, .centre > table {
+        width: 95%;
+    }
+}
